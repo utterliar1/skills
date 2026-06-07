@@ -1,0 +1,44 @@
+{
+  "brainstorming": {
+    "description": "在任何创造性工作前必须使用：创建功能、构建组件、添加功能或修改行为。先探索用户意图、需求和设计，再进入实现。"
+  },
+  "dispatching-parallel-agents": {
+    "description": "面对 2 个以上相互独立、没有共享状态或顺序依赖的任务时使用，用于并行分派处理。"
+  },
+  "executing-plans": {
+    "description": "当已有书面实现计划，需要在单独会话中按检查点执行时使用。"
+  },
+  "finishing-a-development-branch": {
+    "description": "当实现完成、所有测试通过，并需要决定如何合并、创建 PR 或清理分支时使用。"
+  },
+  "receiving-code-review": {
+    "description": "收到代码评审反馈时使用，尤其是反馈不清楚或技术上可疑时；要求严谨验证，而不是盲目照做。"
+  },
+  "requesting-code-review": {
+    "description": "完成任务、实现主要功能或合并前，需要验证工作是否满足要求时使用。"
+  },
+  "subagent-driven-development": {
+    "description": "在当前会话中执行包含独立任务的实现计划时使用。"
+  },
+  "systematic-debugging": {
+    "description": "遇到任何 bug、测试失败或意外行为时，在提出修复前使用。"
+  },
+  "test-driven-development": {
+    "description": "实现任何功能或修复 bug 前使用：先写测试、确认失败，再写实现。"
+  },
+  "using-git-worktrees": {
+    "description": "开始需要隔离的功能工作，或执行实现计划前使用，确保工作发生在隔离的 workspace 中。"
+  },
+  "using-superpowers": {
+    "description": "开始任何对话时使用：建立如何发现和使用 skills 的规则，要求在任何回应前先调用相关 skill。"
+  },
+  "verification-before-completion": {
+    "description": "在声称工作完成、问题修复或测试通过前，以及提交或创建 PR 前使用，要求先运行验证命令并确认输出。"
+  },
+  "writing-plans": {
+    "description": "当已有规格或需求且任务需要多步骤实现时，在接触代码前使用。"
+  },
+  "writing-skills": {
+    "description": "创建、编辑或验证 skills 部署前使用。"
+  }
+}

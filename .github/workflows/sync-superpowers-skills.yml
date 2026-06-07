@@ -1,0 +1,35 @@
+name: Sync Superpowers Skills
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 2 * * 1'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sync skills
+        shell: pwsh
+        run: .\codex-skills\sync-superpowers-skills.ps1
+
+      - name: Commit synced skills
+        shell: pwsh
+        run: |
+          git add -A .
+
+          $staged = git diff --cached --name-only
+          if (-not $staged) {
+            Write-Host "No synced skill changes."
+            exit 0
+          }
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: sync superpowers skills"
+          git push
